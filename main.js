@@ -15,6 +15,10 @@ poseNet.on('pose', gotPoses);
 }
 
 function draw(){
+    background('#c24400');
+    textSize(difference);
+    fill('#120001')
+    text('Aaryan', 260, 250)
 }
 
 function modelLoaded(){
@@ -27,9 +31,7 @@ if(results.length>0){
     
     leftwristx=results[0].pose.leftWrist.x;
     rightwristx=results[0].pose.rightWrist.x;
-    console.log("leftWristx- " + leftwristx +" rightWristx- " + rightwristx);
-
-    difference=leftwristx - rightwristx;
-    console.log("difference- " + difference);
+    difference= floor(leftwristx = rightwristx)
+   
 }
 }
